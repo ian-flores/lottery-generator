@@ -2,10 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
-	"math/rand"
-	"time"
-	"generators"
+	"github.com/ian-flores/lottery-generator/pkg/generators"
 )
 
 func main() {
@@ -14,14 +11,14 @@ func main() {
 
 	switch *lottery {
 	case "powerball":
-		powerball()
+		generators.Powerball()
 	case "traditional":
-		traditional()
+		generators.Traditional()
 	default:
-		powerball()
-		traditional()
-		pega(2)
-		pega(3)
-		pega(4)
+		generators.Powerball()
+		generators.Traditional()
+		generators.Pega(2)
+		generators.Pega(3)
+		generators.Pega(4)
 	}
 }

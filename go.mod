@@ -1,3 +1,3 @@
-module github.com/ian-flores/lotter-generator
+module github.com/ian-flores/lottery-generator
 
 go 1.16

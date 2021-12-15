@@ -1,24 +1,25 @@
 package generators
 
 import (
+	"fatih/color"
 	"fmt"
 	"math/rand"
 	"time"
 )
 
-func powerball() {
+func Powerball() {
 	draw_numbers, special_number := contest_generator(5, 69, 26)
-	fmt.Println("Powerball Numbers")
+	color.Cyan("Powerball Numbers")
 	printResults(draw_numbers, special_number)
 }
 
-func traditional() {
+func Traditional() {
 	draw_numbers, special_number := contest_generator(5, 35, 10)
 	fmt.Println("Traditional Numbers")
 	printResults(draw_numbers, special_number)
 }
 
-func pega(pega_num int) {
+func Pega(pega_num int) {
 	draw_numbers, special_number := contest_generator(pega_num, 9, 0)
 	fmt.Println("Pega", pega_num)
 	printResults(draw_numbers, special_number)
