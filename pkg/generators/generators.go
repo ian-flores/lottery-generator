@@ -1,10 +1,11 @@
 package generators
 
 import (
-	"fatih/color"
 	"fmt"
 	"math/rand"
 	"time"
+
+	"github.com/fatih/color"
 )
 
 func Powerball() {
