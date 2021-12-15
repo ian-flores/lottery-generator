@@ -16,13 +16,13 @@ func Powerball() {
 
 func Traditional() {
 	draw_numbers, special_number := contest_generator(5, 35, 10)
-	fmt.Println("Traditional Numbers")
+	color.Cyan("Traditional Numbers")
 	printResults(draw_numbers, special_number)
 }
 
 func Pega(pega_num int) {
 	draw_numbers, special_number := contest_generator(pega_num, 9, 0)
-	fmt.Println("Pega", pega_num)
+	color.Cyan("Pega", pega_num)
 	printResults(draw_numbers, special_number)
 }
 
@@ -44,10 +44,10 @@ func contest_generator(draw_numbers_size int, draw_number_max int, special_numbe
 }
 
 func printResults(draw_numbers []int, special_number int) {
-	fmt.Println("Draw Numbers:", draw_numbers)
+	color.Green("Draw Numbers:", draw_numbers)
 
 	if special_number != 0 {
-		fmt.Println("Special Number:", special_number)
+		color.Red("Special Number:", special_number)
 	}
 	fmt.Println("")
 }
